@@ -6,6 +6,7 @@ import Status from 'components/Status';
 import Heading from 'components/Heading';
 import Oscar from 'components/Oscar';
 import Button from 'components/Button';
+import Input from 'components/Input';
 
 const friends = [
   { fName: 'Akhil', lName: 'karra' },
@@ -29,6 +30,7 @@ function App() {
         }}>
         Button
       </Button>
+      <Input onChange={(e) => console.log(e.target.value)} value='abc' />
     </div>
   );
 }
