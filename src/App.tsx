@@ -5,6 +5,7 @@ import PersonList from 'components/PersonList';
 import Status from 'components/Status';
 import Heading from 'components/Heading';
 import Oscar from 'components/Oscar';
+import Button from 'components/Button';
 
 const friends = [
   { fName: 'Akhil', lName: 'karra' },
@@ -22,6 +23,12 @@ function App() {
       <Greet name='Avinash' isLoggedIn={true} />
       <Person name={{ fName: 'Venkat', lName: 'Karra' }} friendCount={20} />
       <PersonList friends={friends} />
+      <Button
+        handleClick={() => {
+          console.log(`Button clicked`);
+        }}>
+        Button
+      </Button>
     </div>
   );
 }
