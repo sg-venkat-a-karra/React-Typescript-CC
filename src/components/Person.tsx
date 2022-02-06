@@ -1,15 +1,8 @@
-import React from 'react';
+import { PersonProps } from 'types/Person.type';
 
 /**
  *
  */
-type PersonProps = {
-  name: {
-    fName: string;
-    lName: string;
-  };
-  friendCount: number;
-};
 
 const Person = (props: PersonProps) => {
   return (

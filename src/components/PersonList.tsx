@@ -1,13 +1,10 @@
-import React from 'react';
+import { Friend } from 'types/Person.type';
 
 /**
  *
  */
 type PersonListProps = {
-  friends: {
-    fName: string;
-    lName: string;
-  }[];
+  friends: Friend[];
 };
 
 const PersonList = (props: PersonListProps) => {
