@@ -3,8 +3,12 @@ import React from 'react';
 /**
  *
  */
-const Greet = () => {
-  return <div>Wecome Avinash! You have 10 unread messages.</div>;
+type GreetProps = {
+  name: string;
+};
+
+const Greet = (props: GreetProps) => {
+  return <div>Wecome {props.name}! You have 10 unread messages.</div>;
 };
 
 export default Greet;
