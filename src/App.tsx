@@ -24,8 +24,8 @@ function App() {
       <Person name={{ fName: 'Venkat', lName: 'Karra' }} friendCount={20} />
       <PersonList friends={friends} />
       <Button
-        handleClick={() => {
-          console.log(`Button clicked`);
+        handleClick={(e, id) => {
+          console.log(`Button clicked and event is: ${e} and id is ${id}`);
         }}>
         Button
       </Button>
