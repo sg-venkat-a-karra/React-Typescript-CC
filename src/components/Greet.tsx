@@ -5,10 +5,18 @@ import React from 'react';
  */
 type GreetProps = {
   name: string;
+  messageCount: number;
+  isLoggedIn: boolean;
 };
 
 const Greet = (props: GreetProps) => {
-  return <div>Wecome {props.name}! You have 10 unread messages.</div>;
+  return (
+    <h2>
+      {props.isLoggedIn
+        ? `Welcome ${props.name}! You have ${props.messageCount} unread messages.`
+        : `Welcome Team`}
+    </h2>
+  );
 };
 
 export default Greet;
