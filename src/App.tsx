@@ -9,6 +9,7 @@ import Button from 'components/Button';
 import Input from 'components/Input';
 import Container from 'components/Container';
 import LoggedIn from 'components/state/LoggedIn';
+import Counter from 'components/reducer/Counter';
 
 const friends = [
   { fName: 'Akhil', lName: 'karra' },
@@ -35,6 +36,7 @@ function App() {
       <Input onChange={(e) => console.log(e.target.value)} value='abc' />
       <Container styles={{ border: '1px solid black', padding: '1rem' }} />
       <LoggedIn />
+      <Counter />
     </div>
   );
 }
