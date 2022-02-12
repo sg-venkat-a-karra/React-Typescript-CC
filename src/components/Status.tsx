@@ -13,9 +13,9 @@ const Status = (props: StatusProps) => {
     props.status === 'loading' ||
     props.status === 'waiting' ||
     props.status === 'complete'
-  ) {
+  )
     message = props.status;
-  }
+
   return (
     <div>
       <h4>Status- {message}</h4>
