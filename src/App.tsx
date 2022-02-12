@@ -10,6 +10,10 @@ import Input from 'components/Input';
 import Container from 'components/Container';
 import LoggedIn from 'components/state/LoggedIn';
 import Counter from 'components/reducer/Counter';
+import ThemeContextProvider from 'components/context/ThemeContext';
+import Box from 'components/context/Box';
+import CustomerProvider from 'components/context/CustomerContext';
+import Customer from 'components/context/Customer';
 
 const friends = [
   { fName: 'Akhil', lName: 'karra' },
@@ -37,6 +41,12 @@ function App() {
       <Container styles={{ border: '1px solid black', padding: '1rem' }} />
       <LoggedIn />
       <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <CustomerProvider>
+        <Customer />
+      </CustomerProvider>
     </div>
   );
 }
