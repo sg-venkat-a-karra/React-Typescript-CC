@@ -10,7 +10,7 @@ type AuthUser = {
 
 const LoggedIn = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState({} as AuthUser);
+  const [user, setUser] = useState<AuthUser | null>(null);
   const handleLogIn = () => {
     setIsLoggedIn(true);
     setUser({ name: 'Avinash', email: 'avinash@gmail.com' });
@@ -27,7 +27,7 @@ const LoggedIn = () => {
       <div>User is {isLoggedIn ? 'logged in' : 'logged out'}</div>
       {isLoggedIn ? (
         <div>
-          User Name is {user.name} and email is {user.email}
+          User Name is {user?.name} and email is {user?.email}
         </div>
       ) : null}
     </div>
